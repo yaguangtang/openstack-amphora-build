@@ -7,7 +7,7 @@ RUN dnf install -y pykickstart isomd5sum python2 createrepo sshpass debootstrap 
 RUN git clone https://opendev.org/openstack/octavia -b master /root/octavia
 
 # Install python pip
-RUN dnf install -y python2
+RUN dnf install -y python2 sudo
 # Eventually create a virtualenv
 RUN dnf install -y virtualenv
 RUN virtualenv octavia_disk_image_create
