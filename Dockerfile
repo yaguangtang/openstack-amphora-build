@@ -4,9 +4,9 @@ RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.n
       dnf update -y
 
 # Install python pip
-RUN dnf install -y python-pip
+RUN dnf install -y python2
 # Eventually create a virtualenv
-RUN dnf install -y python-virtualenv
+RUN dnf pip install -y virtualenv
 RUN virtualenv octavia_disk_image_create
 RUN source octavia_disk_image_create/bin/activate
 # Install octavia requirements
