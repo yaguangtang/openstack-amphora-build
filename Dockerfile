@@ -13,8 +13,7 @@ RUN dnf install -y virtualenv
 RUN virtualenv octavia_disk_image_create
 RUN source octavia_disk_image_create/bin/activate
 # Install octavia requirements
-RUN cd /root/octavia/diskimage-create
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r /root/octavia/diskimage-create/requirements.txt
 
 RUN chmod +x /root/octavia/diskimage-create/diskimage-create.sh
 RUN /root/octavia/diskimage-create/diskimage-create.sh
