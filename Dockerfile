@@ -16,6 +16,6 @@ RUN source octavia_disk_image_create/bin/activate
 RUN pip3 install -r /root/octavia/diskimage-create/requirements.txt
 
 RUN chmod +x /root/octavia/diskimage-create/diskimage-create.sh
-RUN /root/octavia/diskimage-create/diskimage-create.sh
+RUN /root/octavia/diskimage-create/diskimage-create.sh -f
 CMD ["/bin/bash", "-l"]
 #RUN cp /root/octavia/diskimage-create/amphora-x64-haproxy.qcow2 /root/amphora-x64-haproxy.qcow2
