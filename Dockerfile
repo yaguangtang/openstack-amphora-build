@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.3-labs
 FROM quay.io/centos/centos:stream8
 
 RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm && \
